@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-
-const MONGODB_URI = process.env.MONGODB_URI || "";
+import { MONGODB_URI } from '../config/env';
 
 export async function connectToDatabase() {
   try {

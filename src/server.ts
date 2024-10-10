@@ -1,11 +1,7 @@
-import dotenv from 'dotenv';
 import { connectToDatabase } from './db/db';
 import app from './app';
 import { startCryptoDataJob } from './jobs/fetchCryptoData';
-
-dotenv.config();
-
-const PORT = process.env.PORT || 3000;
+import { PORT } from './config/env';
 
 async function startServer() {
   try {
